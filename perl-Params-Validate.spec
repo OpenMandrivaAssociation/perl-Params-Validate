@@ -15,7 +15,6 @@ BuildRequires:	perl-devel
 BuildRequires:	perl(Attribute::Handlers)
 BuildRequires:	perl(ExtUtils::CBuilder)
 BuildRequires:	perl(Test::More)
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The Params::Validate module provides a flexible system for validation
