@@ -11,6 +11,7 @@ License:	GPL or Artistic
 Group:		Development/Other
 URL:		http://search.cpan.org/dist/%{module}/
 Source:		http://www.cpan.org/modules/by-module/Params/%{module}-%{version}.tar.bz2
+Patch0:		Params-Validate-0.91-fix-str-fmt.patch
 BuildRequires:	perl-devel
 BuildRequires:	perl(Attribute::Handlers)
 BuildRequires:	perl(ExtUtils::CBuilder)
@@ -29,6 +30,7 @@ data integrity.
 %prep
 
 %setup -q -n %{module}-%{version}
+%patch0 -p0
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
