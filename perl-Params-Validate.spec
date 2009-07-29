@@ -1,22 +1,22 @@
-%define	module	Params-Validate
-%define	name	perl-%{module}
-%define	version	0.91
-%define	release	%mkrel 2
+%define	upstream_name	 Params-Validate
+%define	upstream_version 0.91
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Validate method/function call parameters
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Other
-URL:		http://search.cpan.org/dist/%{module}/
-Source:		http://www.cpan.org/modules/by-module/Params/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/Params/%{upstream_name}-%{upstream_version}.tar.bz2
 Patch0:		Params-Validate-0.91-fix-str-fmt.patch
+
 BuildRequires:	perl-devel
 BuildRequires:	perl(Attribute::Handlers)
 BuildRequires:	perl(ExtUtils::CBuilder)
 BuildRequires:	perl(Test::More)
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The Params::Validate module provides a flexible system for validation
@@ -28,8 +28,7 @@ parameters or as complex as validating object classes (via isa) or capabilities
 data integrity.
 
 %prep
-
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 %patch0 -p0
 
 %build
@@ -53,6 +52,3 @@ rm -fr %{buildroot}
 %{perl_vendorarch}/Params
 %{perl_vendorarch}/Attribute
 %{perl_vendorarch}/auto/Params
-
-
-
