@@ -1,5 +1,5 @@
 %define	upstream_name	 Params-Validate
-%define	upstream_version 0.91
+%define	upstream_version 0.92
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,8 +9,7 @@ Summary:	Validate method/function call parameters
 License:	GPL+ or Artistic
 Group:		Development/Other
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Params/%{upstream_name}-%{upstream_version}.tar.bz2
-Patch0:		Params-Validate-0.91-fix-str-fmt.patch
+Source0:	http://www.cpan.org/modules/by-module/Params/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Attribute::Handlers)
@@ -29,7 +28,6 @@ data integrity.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-%patch0 -p0
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -49,6 +47,5 @@ rm -fr %{buildroot}
 %defattr(-,root,root)
 %doc README Changes
 %{_mandir}/*/*
-%{perl_vendorarch}/Params
-%{perl_vendorarch}/Attribute
+%{perl_vendorlib}/*
 %{perl_vendorarch}/auto/Params
