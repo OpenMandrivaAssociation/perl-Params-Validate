@@ -1,5 +1,5 @@
 %define	upstream_name	 Params-Validate
-%define	upstream_version 0.92
+%define upstream_version 0.93
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -11,10 +11,11 @@ Group:		Development/Other
 Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Params/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires:	perl-devel
 BuildRequires:	perl(Attribute::Handlers)
 BuildRequires:	perl(ExtUtils::CBuilder)
 BuildRequires:	perl(Test::More)
+BuildRequires:	perl-devel
+
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
@@ -34,7 +35,7 @@ data integrity.
 %make CFLAGS="%{optflags}"
 
 %check
-%{__make} test
+%make test
 
 %install
 rm -fr %{buildroot}
