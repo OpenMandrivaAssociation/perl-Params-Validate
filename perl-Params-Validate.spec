@@ -1,5 +1,5 @@
 %define	upstream_name	 Params-Validate
-%define upstream_version 0.93
+%define upstream_version 0.94
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -31,15 +31,15 @@ data integrity.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="%{optflags}"
+%{__perl} Build.PL installdirs=vendor
+./Build CFLAGS="%{optflags}"
 
 %check
-%make test
+./Build test
 
 %install
 rm -fr %{buildroot}
-%makeinstall_std
+./Build install destdir=%{buildroot}
 
 %clean
 rm -fr %{buildroot}
