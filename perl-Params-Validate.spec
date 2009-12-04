@@ -10,6 +10,7 @@ License:	GPL+ or Artistic
 Group:		Development/Other
 Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Params/%{upstream_name}-%{upstream_version}.tar.gz
+Patch0:     Params-Validate-0.94-format-security.patch
 
 BuildRequires:	perl(Attribute::Handlers)
 BuildRequires:	perl(ExtUtils::CBuilder)
@@ -29,6 +30,7 @@ data integrity.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
+%patch0 -b .fmtsec
 
 %build
 %{__perl} Build.PL installdirs=vendor
