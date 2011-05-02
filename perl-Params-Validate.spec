@@ -11,6 +11,7 @@ Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Params/%{upstream_name}-%{upstream_version}.tar.gz
 Patch0:     Params-Validate-0.98-fix-format-errors.patch
 BuildRequires:	perl(Attribute::Handlers)
+BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(ExtUtils::CBuilder)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
