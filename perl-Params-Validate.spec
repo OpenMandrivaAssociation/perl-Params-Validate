@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    2
 Summary:	Validate method/function call parameters
 License:	GPL+ or Artistic
 Group:		Development/Other
@@ -14,8 +14,8 @@ BuildRequires:	perl(Attribute::Handlers)
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(ExtUtils::CBuilder)
 BuildRequires:	perl(Test::More)
-BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRequires:	perl-devel >= 2:5.14
+BuildRequires:	perl-List-MoreUtils >= 0.320.0-3
 
 %description
 The Params::Validate module provides a flexible system for validation
