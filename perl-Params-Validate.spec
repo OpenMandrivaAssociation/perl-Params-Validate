@@ -1,14 +1,14 @@
-%define	upstream_name	 Params-Validate
-%define upstream_version 1.06
+%define	modname	Params-Validate
+%define	modver	1.06
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Name:		perl-%{modname}
+Version:	%{perl_convert_version %{modver}}
+Release:	4
 Summary:	Validate method/function call parameters
 License:	GPL+ or Artistic
 Group:		Development/Other
-Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Params/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		http://search.cpan.org/dist/%{modname}/
+Source0:	http://www.cpan.org/modules/by-module/Params/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl(Attribute::Handlers)
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Module::Implementation)
@@ -28,15 +28,13 @@ parameters or as complex as validating object classes (via isa) or capabilities
 data integrity.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{modname}-%{modver}
 
 %build
-%__perl Build.PL installdirs=vendor
-./Build CFLAGS="%{optflags}"
+perl Build.PL installdirs=vendor
+./Build
 
 %check
-# avoid strange unlinking error
-rm -f t/28-readonly-return.t
 ./Build test
 
 %install
@@ -48,8 +46,11 @@ rm -fr %{buildroot}
 %{_mandir}/*/*
 %{perl_vendorlib}/*
 
-
 %changelog
+* Fri Dec 28 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.60.0-4
+- rebuild for perl-5.16.2
+- cleanups
+
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-3
 + Revision: 765584
 - rebuilt for perl-5.14.2
