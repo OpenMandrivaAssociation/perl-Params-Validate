@@ -38,7 +38,6 @@ perl Build.PL installdirs=vendor
 ./Build test
 
 %install
-rm -fr %{buildroot}
 ./Build install destdir=%{buildroot}
 
 %files
