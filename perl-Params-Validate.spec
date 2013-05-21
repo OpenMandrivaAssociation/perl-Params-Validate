@@ -3,7 +3,7 @@
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	4
+Release:	5
 Summary:	Validate method/function call parameters
 License:	GPL+ or Artistic
 Group:		Development/Other
