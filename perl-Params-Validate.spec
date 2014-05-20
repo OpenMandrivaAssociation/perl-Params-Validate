@@ -1,7 +1,8 @@
 %define	modname	Params-Validate
-%define modver 1.09
+%define modver 1.10
 
 Summary:	Validate method/function call parameters
+
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
@@ -46,6 +47,7 @@ perl Build.PL installdirs=vendor
 %doc README Changes
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+
 
 
 

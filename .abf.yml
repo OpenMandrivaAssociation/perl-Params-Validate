@@ -1,5 +1,6 @@
 removed_sources:
   Params-Validate-1.06.tar.gz: d381cc8da4ee4a1502c71a3317be69e87bd4dc07
   Params-Validate-1.08.tar.gz: 0ec98748b756cb5f6e34a6db6eaa13b5e4105cb1
-sources:
   Params-Validate-1.09.tar.gz: a246f4d5dbab8563649860a4c6ed99b059fc9734
+sources:
+  Params-Validate-1.10.tar.gz: a433a3ffcbd82640bfcfc80c4bb11a57ae8b23b6
