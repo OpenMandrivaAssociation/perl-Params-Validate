@@ -1,12 +1,12 @@
 %define	modname	Params-Validate
-%define modver 1.10
+%define modver 1.11
 
 Summary:	Validate method/function call parameters
 
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Other
 Url:		http://search.cpan.org/dist/%{modname}/
@@ -47,7 +47,3 @@ perl Build.PL installdirs=vendor
 %doc README Changes
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
-
-
-
