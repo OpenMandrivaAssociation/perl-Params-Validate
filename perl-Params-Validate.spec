@@ -44,6 +44,6 @@ perl Build.PL installdirs=vendor
 ./Build install destdir=%{buildroot}
 
 %files
-%doc README Changes
+%doc Changes
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
