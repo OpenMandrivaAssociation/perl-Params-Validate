@@ -1,5 +1,5 @@
 %define	modname	Params-Validate
-%define modver 1.26
+%define modver 1.29
 
 Summary:	Validate method/function call parameters
 
