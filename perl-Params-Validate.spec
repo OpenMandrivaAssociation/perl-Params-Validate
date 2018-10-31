@@ -6,7 +6,7 @@ Summary:	Validate method/function call parameters
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Other
 Url:		http://search.cpan.org/dist/%{modname}/
