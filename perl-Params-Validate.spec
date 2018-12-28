@@ -6,10 +6,10 @@ Summary:	Validate method/function call parameters
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Other
-Url:		http://search.cpan.org/dist/%{modname}/
+Url:		https://metacpan.org/release/Params-Validate
 Source0:	http://www.cpan.org/modules/by-module/Params/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl(Attribute::Handlers)
 BuildRequires:	perl(Module::Build)
