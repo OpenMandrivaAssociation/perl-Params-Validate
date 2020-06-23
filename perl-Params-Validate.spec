@@ -6,7 +6,7 @@ Summary:	Validate method/function call parameters
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	5
+Release:	6
 License:	GPLv2+ or Artistic
 Group:		Development/Other
 Url:		https://metacpan.org/release/Params-Validate
