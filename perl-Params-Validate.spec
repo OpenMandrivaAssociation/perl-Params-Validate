@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 %define	modname	Params-Validate
 %define modver 1.30
 
@@ -6,7 +8,7 @@ Summary:	Validate method/function call parameters
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Other
 Url:		https://metacpan.org/release/Params-Validate
