@@ -1,24 +1,19 @@
-%define _empty_manifest_terminate_build 0
-
 %define	modname	Params-Validate
-%define modver 1.30
 
 Summary:	Validate method/function call parameters
-
-
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	3
+Version:	1.31
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Other
 Url:		https://metacpan.org/release/Params-Validate
-Source0:	http://www.cpan.org/modules/by-module/Params/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Params/%{modname}-%{version}.tar.gz
 BuildRequires:	perl(Attribute::Handlers)
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Module::Implementation)
 BuildRequires:	perl(ExtUtils::CBuilder)
-BuildRequires:	perl-devel >= 2:5.14
-BuildRequires:	perl-List-MoreUtils >= 0.320.0-3
+BuildRequires:	perl-devel
+BuildRequires:	perl-List-MoreUtils
 # For tests
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::Fatal)
@@ -35,7 +30,7 @@ parameters or as complex as validating object classes (via isa) or capabilities
 data integrity.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
 perl Build.PL installdirs=vendor
