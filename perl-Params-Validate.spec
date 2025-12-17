@@ -3,7 +3,7 @@
 Summary:	Validate method/function call parameters
 Name:		perl-%{modname}
 Version:	1.31
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Other
 Url:		https://metacpan.org/release/Params-Validate
